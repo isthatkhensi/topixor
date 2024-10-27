@@ -1,0 +1,35 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// Color Palette
+$primary-color: #003366; // Navy blue
+$color: #FFF5E1; // Cream
+$accent-color: #D2B48C; // Sand Brown
+$accent-light: #E9DCC9; // Lighter Sand Brown
+$teriary-color: #333333; // Charcoal Gray
+
+// Fonts
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Open Sans', serif;
+
+$font-md: 16px;
+$font-lg: 24px;
+$font-sm: 12px;
+
+// Flexbox Center
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Media Query Helper
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @media (max-width: 600px) { @content; }
+    }
+    @else if $breakpoint == 'tablet' {
+        @media (max-width: 900px) { @content; }
+    }
+}
